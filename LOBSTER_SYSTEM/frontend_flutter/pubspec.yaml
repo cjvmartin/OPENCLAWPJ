@@ -1,0 +1,28 @@
+LOBSTER_SYSTEM/
+├── backend/                # FastAPI 後端 (執行於 i7-9700)
+│   ├── main.py             # 後端程式入口點
+│   ├── api/                # API 路由與接口
+│   │   ├── line_webhook.py # 處理 LINE 訊息
+│   │   └── app_endpoints.py# 供 Flutter 呼叫的接口
+│   ├── core/               # 龍蝦大腦邏輯
+│   │   ├── agent_a.py      # 點餐、語意解析、分帳
+│   │   └── agent_b.py      # 語音模擬、店家對接
+│   ├── database/           # 資料庫管理
+│   │   └── orders.db       # SQLite 資料庫檔案
+│   ├── config/             # 設定檔
+│   │   └── settings.py     # 存放 API Key、Token
+│   └── requirements.txt    # Python 依賴清單
+│
+├── frontend_flutter/       # Flutter 手機 APP (外送端)
+│   ├── lib/
+│   │   ├── main.dart       # APP 入口
+│   │   ├── screens/        # 各個頁面 (地圖、訂單列表)
+│   │   └── models/         # 資料模型 (定義訂單格式)
+│   ├── assets/             # 靜態資源
+│   │   └── images/         # 龍蝦客服 PNG 圖
+│   └── pubspec.yaml        # Flutter 套件管理
+│
+└── docs/                   # 專案文件與資產
+    ├── diagrams/           # Mermaid 流程圖代碼
+    ├── assets/             # 龍蝦 mascot 原始圖
+    └── mid_report/         # 期中報告 PPT 與劇本
