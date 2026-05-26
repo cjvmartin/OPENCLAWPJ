@@ -7,7 +7,8 @@ class LobsterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('🦞 龍蝦外送員端'), backgroundColor: Colors.redAccent),
+        appBar:
+            AppBar(title: Text('🦞 龍蝦外送員端'), backgroundColor: Colors.redAccent),
         body: OrderList(),
       ),
     );
@@ -26,12 +27,13 @@ class OrderList extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.delivery_dining, color: Colors.red),
               title: Text('高科大餐廳 -> 電機大樓'),
-              subtitle: Text('待接單 | 預計收益: $50'),
+              subtitle: Text('待接單 | 預計收益: \$150'),
             ),
             ElevatedButton(
-              onPressed: () { /* 點擊後呼叫 FastAPI */ },
+              onPressed: () {/* 點擊後呼叫 FastAPI */},
               child: Text('立即接單'),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
             ),
             SizedBox(height: 10),
           ],
